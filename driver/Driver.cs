@@ -1,5 +1,4 @@
 using System.Data.Common;
-
 public class Driver
 {
     private int identifier;
