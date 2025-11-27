@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>maximpracticeappBenchmark.MapBenchmark-20251127-163858</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet v0.15.6, Windows 10 (10.0.19045.6466/22H2/2022Update)
+11th Gen Intel Core i5-1135G7 2.40GHz (Max: 2.42GHz), 1 CPU, 8 logical and 4 physical cores
+.NET SDK 8.0.403
+  [Host]     : .NET 6.0.35 (6.0.35, 6.0.3524.45918), X64 RyuJIT x86-64-v3
+  DefaultJob : .NET 6.0.35 (6.0.35, 6.0.3524.45918), X64 RyuJIT x86-64-v3
+</code></pre>
+<pre><code></code></pre>
+
+<table>
+<thead><tr><th>Method</th><th>NumberOfDrivers</th><th>Mean  </th><th>Error</th><th>StdDev</th><th>Median</th><th>Ratio</th><th>RatioSD</th><th>Rank</th><th>Gen0</th><th>Allocated</th><th>Alloc Ratio</th>
+</tr>
+</thead><tbody><tr><td>SortAlg</td><td>100</td><td>3.961 &mu;s</td><td>0.1046 &mu;s</td><td>0.3084 &mu;s</td><td>3.784 &mu;s</td><td>1.01</td><td>0.11</td><td>1</td><td>0.2365</td><td>1000 B</td><td>1.00</td>
+</tr><tr><td>IncrAlg</td><td>100</td><td>5.870 &mu;s</td><td>0.1671 &mu;s</td><td>0.4433 &mu;s</td><td>5.944 &mu;s</td><td>1.49</td><td>0.16</td><td>2</td><td>0.3128</td><td>1320 B</td><td>1.32</td>
+</tr><tr><td>HeapAlg</td><td>100</td><td>14.581 &mu;s</td><td>0.4102 &mu;s</td><td>1.2094 &mu;s</td><td>14.225 &mu;s</td><td>3.70</td><td>0.42</td><td>3</td><td>3.8452</td><td>16128 B</td><td>16.13</td>
+</tr><tr><td>IncrAlg</td><td>1000</td><td>51.749 &mu;s</td><td>1.7111 &mu;s</td><td>5.0451 &mu;s</td><td>53.401 &mu;s</td><td>0.49</td><td>0.06</td><td>1</td><td>0.4883</td><td>2088 B</td><td>0.25</td>
+</tr><tr><td>SortAlg</td><td>1000</td><td>106.764 &mu;s</td><td>2.9279 &mu;s</td><td>8.6331 &mu;s</td><td>107.378 &mu;s</td><td>1.01</td><td>0.12</td><td>2</td><td>1.9531</td><td>8200 B</td><td>1.00</td>
+</tr><tr><td>HeapAlg</td><td>1000</td><td>159.695 &mu;s</td><td>7.2713 &mu;s</td><td>21.2107 &mu;s</td><td>149.452 &mu;s</td><td>1.51</td><td>0.24</td><td>3</td><td>36.3770</td><td>153096 B</td><td>18.67</td>
+</tr><tr><td>IncrAlg</td><td>10000</td><td>510.689 &mu;s</td><td>10.1604 &mu;s</td><td>23.7496 &mu;s</td><td>523.714 &mu;s</td><td>0.39</td><td>0.03</td><td>1</td><td>-</td><td>2376 B</td><td>0.03</td>
+</tr><tr><td>HeapAlg</td><td>10000</td><td>1,280.641 &mu;s</td><td>31.5555 &mu;s</td><td>92.0490 &mu;s</td><td>1,323.276 &mu;s</td><td>0.97</td><td>0.10</td><td>2</td><td>363.2813</td><td>1521768 B</td><td>18.97</td>
+</tr><tr><td>SortAlg</td><td>10000</td><td>1,327.217 &mu;s</td><td>32.9506 &mu;s</td><td>90.2018 &mu;s</td><td>1,361.580 &mu;s</td><td>1.00</td><td>0.10</td><td>2</td><td>17.5781</td><td>80200 B</td><td>1.00</td>
+</tr></tbody></table>
+</body>
+</html>
