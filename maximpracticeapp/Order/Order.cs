@@ -11,19 +11,6 @@ public class Order
         this.yCord = y;
     }
 
-    public static Order GetOrderById(int id, List<Order> list)
-    {
-        Order order = list.FirstOrDefault(o => o.identifier == id);
-        return order;
-    }
-
-    public int Identifier
-    {
-        get { return this.identifier; }
- 
-        set { this.identifier = value; }
-    }
-
     public int XCord
     {
         get { return this.xCord; }

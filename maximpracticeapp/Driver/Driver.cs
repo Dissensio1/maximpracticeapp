@@ -11,18 +11,11 @@ public class Driver
         this.xCord = x;
         this.yCord = y;
     }
-
-    public Driver changeLocation(int x, int y)
+    public Driver(int id, int x, int y)
     {
+        this.identifier = id;
         this.xCord = x;
         this.yCord = y;
-        return this;
-    }
-
-    public static Driver getDriverById(int id, List<Driver> list)
-    {
-        Driver driver = list.FirstOrDefault(d => d.identifier == id);
-        return driver;
     }
 
     public int Identifier
