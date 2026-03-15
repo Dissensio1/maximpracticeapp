@@ -1,5 +1,5 @@
-﻿
-internal class Program
+﻿namespace Program;
+internal static class Program
 {
     private static void Main(string[] args)
     {
@@ -11,8 +11,14 @@ internal class Program
         int n = int.Parse(Console.ReadLine());
         Console.Write("Введите m: ");
         int m = int.Parse(Console.ReadLine());
+        Console.Write("Введите количество водителей: ");
+        int size = int.Parse(Console.ReadLine());
 
-        int size = 10;
+        if(size > m * n)
+        {
+            size = rand.Next(1, m + n - 1);
+        }
+
         Driver[] driversArr;
         Order newOrder;
         var uniqueDrivers = new HashSet<Driver>();
@@ -52,22 +58,31 @@ internal class Program
             Console.WriteLine(" distance:" + driversArr[i].Distance);
         }
 
-        Array.Sort(driversArr, (d1, d2) => d1.Distance.CompareTo(d2.Distance));
-        Console.WriteLine("5 closest drivers:");
-        for(int i = 0; i < 5; i++)
+        var nearest = Map.FindNearestDriversSort(newOrder, driversArr, 5);
+
+        Console.WriteLine("Алгоритм 1 (сортировка):");
+        for(int i = 0; i < nearest.Count; i++)
         {
-            Console.Write("id:" + driversArr[i].Identifier);
-            Console.WriteLine(" distance:" + driversArr[i].Distance);
+            Console.Write($"id: {nearest[i].Identifier}");
+            Console.WriteLine($" distance: {nearest[i].Distance}");
         }
 
-        // for (int i = 0; i < size; i++)
-        // {
-        //     Console.Write(driversArr[i].Identifier + " ");
-        //     Console.Write(driversArr[i].XCord + " ");
-        //     Console.WriteLine(driversArr[i].YCord);
-        // }
-        // Console.Write(newOrder.Identifier + " ");
-        // Console.Write(newOrder.XCord + " ");
-        // Console.WriteLine(newOrder.YCord);
+        nearest = Map.FindNearestDriversHeap(newOrder, driversArr, 5);
+        
+        Console.WriteLine("Алгоритм 2 (куча):");
+        for (int i = 0; i < nearest.Count; i++)
+        {
+            Console.Write($"id: {nearest[i].Identifier}");
+            Console.WriteLine($" distance: {nearest[i].Distance}");
+        }
+
+        nearest = Map.FindNearestDriversIncr(newOrder, driversArr, 5);
+        
+        Console.WriteLine("Алгоритм 3 (инкрементальный):");
+        for (int i = 0; i < nearest.Count; i++)
+        {
+            Console.Write($"id: {nearest[i].Identifier}");
+            Console.WriteLine($" distance: {nearest[i].Distance}");
+        }
     }
 }

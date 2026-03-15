@@ -1,20 +1,21 @@
-public class Order
+using System.Data.Common;
+public class Driver
 {
     private int identifier;
     private int xCord;
     private int yCord;
+    private double distance;
 
-    public Order(int id, int x, int y)
+    public Driver(int x, int y)
+    {
+        this.xCord = x;
+        this.yCord = y;
+    }
+    public Driver(int id, int x, int y)
     {
         this.identifier = id;
         this.xCord = x;
         this.yCord = y;
-    }
-
-    public static Order GetOrderById(int id, List<Order> list)
-    {
-        Order order = list.FirstOrDefault(o => o.identifier == id);
-        return order;
     }
 
     public int Identifier
@@ -36,5 +37,12 @@ public class Order
         get { return this.yCord; }
  
         set { this.yCord = value; }
+    }
+
+    public double Distance
+    {
+        get { return this.distance; }
+ 
+        set { this.distance = value; }
     }
 }

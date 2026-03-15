@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "maximpracticeapp", "maximpracticeapp.csproj", "{09D16098-F564-4976-B8AF-7E5A38568C94}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "maximpracticeapp", "maximpracticeapp\maximpracticeapp.csproj", "{09D16098-F564-4976-B8AF-7E5A38568C94}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "maximpracticeappBenchmark", "maximpracticeappBenchmark\maximpracticeappBenchmark.csproj", "{CF1F84B8-67F3-496E-83C7-5CB701712EC0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "maximpracticeappNUnit", "maximpracticeappNUnit\maximpracticeappNUnit.csproj", "{9B618400-CCD4-4DB8-8DB2-DC187790D503}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,18 @@ Global
 		{09D16098-F564-4976-B8AF-7E5A38568C94}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{09D16098-F564-4976-B8AF-7E5A38568C94}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{09D16098-F564-4976-B8AF-7E5A38568C94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2E784CD-74AC-4854-82D2-DF07CA434998}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2E784CD-74AC-4854-82D2-DF07CA434998}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2E784CD-74AC-4854-82D2-DF07CA434998}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2E784CD-74AC-4854-82D2-DF07CA434998}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF1F84B8-67F3-496E-83C7-5CB701712EC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF1F84B8-67F3-496E-83C7-5CB701712EC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF1F84B8-67F3-496E-83C7-5CB701712EC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF1F84B8-67F3-496E-83C7-5CB701712EC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B618400-CCD4-4DB8-8DB2-DC187790D503}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B618400-CCD4-4DB8-8DB2-DC187790D503}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B618400-CCD4-4DB8-8DB2-DC187790D503}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B618400-CCD4-4DB8-8DB2-DC187790D503}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
